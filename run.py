@@ -1,6 +1,5 @@
 import screenshot
 import identify_crop
-import apply_crop
 import apply_crop_lr
 
 

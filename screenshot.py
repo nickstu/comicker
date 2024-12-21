@@ -9,7 +9,7 @@ def take_screenshots(num_repeats=100, initial_delay=10, delay=10):
     for i in range(num_repeats):
         # Take a screenshot
         screenshot = pyautogui.screenshot()
-        screenshot.save(f'screenshot/screenshot_{i}.png')
+        screenshot.save(f'screenshot/screenshot_{i:03d}.png')
         
         # Wait for the specified delay
         time.sleep(delay)
@@ -20,3 +20,6 @@ def take_screenshots(num_repeats=100, initial_delay=10, delay=10):
         print(f"Iteration {i + 1}/{num_repeats} completed")
 
     print("Process completed!")
+
+if __name__ == "__main__":
+    take_screenshots(num_repeats=100)

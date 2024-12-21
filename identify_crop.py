@@ -8,12 +8,7 @@ def identify_crop_coordinates(screenshot_dir, white_threshold=250, white_pixel_c
     left  = float('inf')
     right = 0
 
-    def extract_number(filename):
-        match = re.search(r'\d+', filename)
-        return int(match.group()) if match else float('inf')
-
-    image_files = sorted([f for f in os.listdir(screenshot_dir) if f.endswith('.png')],
-                         key=extract_number)
+    image_files = sorted([f for f in os.listdir(screenshot_dir) if f.endswith('.png')])
 
     for filename in image_files:
         image_path = os.path.join(screenshot_dir, filename)
